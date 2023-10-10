@@ -30,7 +30,7 @@ public class SuperiorCreatureNotifierPlugin extends Plugin
 
 	@Subscribe
 	public void onChatMessage(ChatMessage chatMessage){
-		if(chatMessage.getMessage().contains("A superior foe has appeared...")){
+		if(chatMessage.getMessage().contains("A superior foe has appeared...") && chatMessage.getType() == ChatMessageType.GAMEMESSAGE){
 			playSound();
 		}
 	}
